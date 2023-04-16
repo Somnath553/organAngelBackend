@@ -5,8 +5,8 @@ const Hospitals=require('../models/Hospitals')
 
 router.post('/addhospital',fetchuser,async (req,res) =>{
     try {
-        const {hospitalName,location,email,mobile,organ,tag} = req.body;
-        const hospitals =new Hospitals({hospitalName,location,email,mobile,organ,tag});
+        const {hospitalName,location,email,mobile,organ} = req.body;
+        const hospitals =new Hospitals({hospitalName,location,email,mobile,organ});
         const savedhospitals=await hospitals.save();
         res.json(savedhospitals)
     } catch (err) {

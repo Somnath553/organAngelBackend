@@ -21,10 +21,6 @@ const HospitalsSchema= new Schema({
         type: 'string',
         required: true,
     },
-    tag:{
-        type: 'string',
-        required: true,
-    }
 })
 const Hospitals=mongoose.model('hospitals',HospitalsSchema);
 module.exports=Hospitals;
